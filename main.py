@@ -10,6 +10,7 @@ stripe.api_key = "sk_test_51I5wGLEiMZrqQBFpvmene28OErmm472BJgPkLtPwRMImrNV6eIaPf
 
 from flask import Flask, render_template, jsonify, request
 
+print("Testing")
 app = Flask(__name__, static_folder=".",
 
             static_url_path="", template_folder=".")
@@ -44,6 +45,5 @@ def create_payment():
 
     except Exception as e:
         return jsonify(error=str(e)), 403
-
 if __name__=="__main__":
     app.run()
