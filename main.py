@@ -24,7 +24,7 @@ def calculate_order_amount(items):
 
     return 1400
 @app.route("/")
-def main():
+def kaka():
     return "test"
 @app.route('/create-payment-intent', methods=['POST'])
 
@@ -45,5 +45,5 @@ def create_payment():
     except Exception as e:
         return jsonify(error=str(e)), 403
 
-if __name__ == '__main__':
+if __name__=="__main__":
     app.run()
